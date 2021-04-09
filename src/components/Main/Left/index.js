@@ -58,6 +58,7 @@ export default () => {
           </div>
           顯示更多
         </div>
+        <div className="headsubtitle">你的捷徑</div>
       </div>
     </div>
   );

@@ -6,9 +6,9 @@ import Left from "./Left";
 export default () => {
   return (
     <>
-      <Right />
-      <Center />
       <Left />
+      <Center />
+      <Right />
     </>
   );
 };

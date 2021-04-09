@@ -67,3 +67,17 @@
 .leftTitleButtom:hover {
   background-color: #49494b;
 }
+.headsubtitle {
+  display: flex;
+  width: 95%;
+  height: 37px;
+  box-sizing: border-box;
+  border-top: 1px solid #545454;
+  padding-top: 18px;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #9e9d9d;
+  font-weight: 700;
+  font-size: 17px;
+}

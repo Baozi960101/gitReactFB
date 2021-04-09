@@ -4,7 +4,7 @@ import Head from "./images/head.jpg";
 
 export default () => {
   return (
-    <div className="headPersonal">
+    <div className="rightHeadPersonal">
       <img src={Head} />
     </div>
   );
