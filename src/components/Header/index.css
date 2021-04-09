@@ -3,3 +3,68 @@ body {
   background-color: #18191a;
   color: white;
 }
+.headBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background-color: #242526;
+    top: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(57 58 59);
+}
+.headRight{
+    display: flex;
+    align-items: center;
+    width: 292px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.headLeft{
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.HeadCenterBox{
+    display: flex;
+    height: 100%;
+    margin-right: 3%;
+    box-sizing: border-box;
+}
+.headCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 129.59px;
+    height: 100%;
+    margin: 0 2px 0 2px;
+}
+.headCenterhover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 123px;
+    height: 90%;
+    border-radius: 10px;
+}
+.headCenterhover:hover{   
+    background-color: #3a3b3c;
+}
+.headCenterImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+}
+.headCenterImg>img{
+    width: 23px;
+    height: 23px;
+}
+.headerBorder{
+    border-bottom: 3px solid rgb(45 136 255);
+}
+
