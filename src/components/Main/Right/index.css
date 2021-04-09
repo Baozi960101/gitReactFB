@@ -1,7 +1,5 @@
 .rightBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  
   width: 360px;
   height: 100vh;
   overflow-y: auto;

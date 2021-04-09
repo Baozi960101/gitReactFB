@@ -5,7 +5,7 @@ import Head from "./HeadLogo";
 export default () => {
   return (
     <div className="rightBox">
-      <div className="rightTitleBox">
+      
         <div className="advertising">4</div>
         <div className="contacts">contacts</div>
         <div className="rightTitle">
@@ -35,7 +35,7 @@ export default () => {
         </div>
         <div className="contacts">群組對話</div>
         <div className="rightTitle"></div>
-      </div>
+      
     </div>
   );
 };
