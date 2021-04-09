@@ -3,68 +3,157 @@ body {
   background-color: #18191a;
   color: white;
 }
-.headBox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 56px;
-    background-color: #242526;
-    top: 0;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgb(57 58 59);
+.headBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  background-color: #242526;
+  top: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(57 58 59);
 }
-.headRight{
-    display: flex;
-    align-items: center;
-    width: 292px;
-    height: 100%;
-    box-sizing: border-box;
+.fbBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  padding-left: 16px;
 }
-.headLeft{
-    display: flex;
-    align-items: center;
-    width: 320px;
-    height: 100%;
-    box-sizing: border-box;
+.fbBox > img {
+  width: 40px;
+  height: 40px;
 }
-.HeadCenterBox{
-    display: flex;
-    height: 100%;
-    margin-right: 3%;
-    box-sizing: border-box;
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 7px 16px 9px 36px;
+  border: 0;
+  background-color: #3a3b3c;
+  color: #94989b;
+  outline: none;
+  border-radius: 25px;
+  margin-left: 8px;
+  font-size: 15px;
+  font-weight: 600;
 }
-.headCenter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 129.59px;
-    height: 100%;
-    margin: 0 2px 0 2px;
+.headRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 307px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 16px 0 4px;
 }
-.headCenterhover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 123px;
-    height: 90%;
-    border-radius: 10px;
+.headLeft {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
-.headCenterhover:hover{   
-    background-color: #3a3b3c;
+.HeadCenterBox {
+  display: flex;
+  height: 100%;
+  margin-right: 3%;
+  box-sizing: border-box;
 }
-.headCenterImg{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
+.searchLogo {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  box-sizing: border-box;
+  left: 75px;
 }
-.headCenterImg>img{
-    width: 23px;
-    height: 23px;
+.searchLogo > img {
+  width: 16px;
+  height: 16px;
 }
-.headerBorder{
-    border-bottom: 3px solid rgb(45 136 255);
+.headCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 129.59px;
+  height: 100%;
+  margin: 0 2px 0 2px;
+}
+.headCenterhover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 123px;
+  height: 90%;
+  border-radius: 10px;
+}
+.headCenterhover:hover {
+  background-color: #3a3b3c;
+}
+.headCenterImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+.headCenterImg > img {
+  width: 23px;
+  height: 23px;
+}
+.headerBorder {
+  border-bottom: 3px solid rgb(45 136 255);
 }
 
+.headPersonalBox {
+  display: flex;
+  align-items: center;
+  width: 95px;
+  height: 36px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+.headPersonalBox:hover {
+  background-color: #3a3b3c;
+}
+.headPersonal {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 28px;
+  height: 28px;
+}
+.headPersonal > img {
+  width: 28px;
+  height: 28px;
+}
+.headPersonalText {
+  padding-left: 7px;
+  font-size: 14px;
+  color: rgb(221, 221, 221);
+  font-weight: 800;
+  box-sizing: border-box;
+}
+.headRightLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #3a3b3c;
+}
+.headRightLogo > img {
+  width: 16px;
+  height: 16px;
+}
+.headRightLogo:hover {
+  background-color: #505152;
+}
