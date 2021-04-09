@@ -13,6 +13,8 @@ body {
   top: 0;
   box-sizing: border-box;
   border-bottom: 1px solid rgb(57 58 59);
+  position: fixed;
+  z-index: 1;
 }
 .fbBox {
   display: flex;
@@ -26,6 +28,7 @@ body {
 .fbBox > img {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 .search {
   display: flex;
@@ -93,6 +96,7 @@ body {
   width: 123px;
   height: 90%;
   border-radius: 10px;
+  cursor: pointer;
 }
 .headCenterhover:hover {
   background-color: #3a3b3c;
@@ -120,6 +124,7 @@ body {
   padding: 0 4px;
   box-sizing: border-box;
   border-radius: 25px;
+  cursor: pointer;
 }
 .headPersonalBox:hover {
   background-color: #3a3b3c;
@@ -149,6 +154,7 @@ body {
   height: 40px;
   border-radius: 25px;
   background-color: #3a3b3c;
+  cursor: pointer;
 }
 .headRightLogo > img {
   width: 16px;
