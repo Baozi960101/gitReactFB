@@ -1,0 +1,14 @@
+.centerMainBox {
+  padding-top: 75px;
+  margin: 0 35px 0 35px;
+  width: 57%;
+  height: 100vh;
+  box-sizing: border-box;
+  color: rgb(253, 250, 250);
+}
+.centerBox {
+  width: 678px;
+  background-color: tomato;
+  margin-left: auto;
+  margin-right: 134px;
+}
