@@ -1,5 +1,4 @@
 .rightBox {
-  
   width: 360px;
   height: 100vh;
   overflow-y: auto;
@@ -8,22 +7,49 @@
   right: 0;
   position: fixed;
 }
-.rightTitleBox {
-  width: 100%;
+.rightBox::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.rightBox::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: rgb(105, 105, 105);
+}
+.rightBox::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
 }
 .advertising {
-  display: flex;
   width: 100%;
-  height: 100px;
   padding: 0 8px 0 8px;
+  box-sizing: border-box;
+}
+.advertisingTitle {
+  width: 100%;
+  height: 25px;
+  color: #9e9d9d;
+  margin: 5px 0 5px 2px;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-weight: 800;
+}
+.advertisingMain {
+  width: 100%;
+  color: #ccc9c9;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.advertisingMain:hover {
+  background-color: #424244;
 }
 .contacts {
   display: flex;
+  justify-content: space-between;
   width: 95%;
   height: 37px;
   box-sizing: border-box;
   border-top: 1px solid #545454;
-  padding-top: 18px;
+  padding-top: 13px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -32,6 +58,26 @@
   font-size: 18px;
   margin-bottom: 10px;
   font-family: "Source Sans Pro", sans-serif;
+}
+.contactsText {
+  width: 70%;
+  height: 100%;
+}
+.contactsImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.contactsImg > img {
+  width: 15px;
+  height: 15px;
+}
+.contactsImg:hover {
+  background-color: #424244;
 }
 .rightTitle {
   display: flex;
@@ -57,6 +103,7 @@
   width: 36px;
   height: 36px;
   margin-right: 12px;
+  box-sizing: border-box;
 }
 .rightHeadPersonal > img {
   width: 36px;
@@ -72,4 +119,43 @@
   border: 2px solid black;
   left: 36px;
   bottom: 9px;
+}
+.rightTitleButtom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 20px;
+  background-color: #303031;
+  box-sizing: border-box;
+  margin: 0px 12px 0 2px;
+}
+.rightTitleButtom > img {
+  width: 14px;
+  height: 14px;
+}
+.rightTitleButtom:hover {
+  background-color: #49494b;
+}
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: #49494b;
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  bottom: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.edit > img {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  margin: 0px -1px 4px 1px;
 }
