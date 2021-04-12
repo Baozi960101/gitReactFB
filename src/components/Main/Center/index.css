@@ -28,6 +28,21 @@
   background-color: white;
   cursor: pointer;
 }
+.centerDynamicText {
+  display: none;
+}
+.centerDynamicTextLift {
+  width: 68px;
+  height: 20px;
+  font-size: 16px;
+}
+.centerDynamicTextRight {
+  width: 88px;
+  height: 20px;
+  font-size: 15px;
+  color: rgb(177, 175, 175);
+}
+
 .centerDynamicArrow {
   display: flex;
   justify-content: center;
@@ -266,4 +281,110 @@
 }
 .centerMainButton:hover {
   background-color: rgb(63, 63, 63);
+}
+.centerPORWD {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 53px;
+  box-sizing: border-box;
+  margin-bottom: 13px;
+  padding: 0 9px;
+  background-color: #3a3a3a;
+}
+.centerPOTextRWD {
+  display: flex;
+  align-items: center;
+  width: 77%;
+  height: 65%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  background-color: rgb(58 58 58);
+  color: rgb(184, 184, 184);
+  font-size: 17px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #585858;
+}
+
+.centerPOTextRWDImg {
+  width: 36px;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.centerPOTextRWDImg > img {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  margin: 3px 0 0px 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .centerMainAllBox {
+    margin-top: 18px;
+    background-color: rgb(53 53 53);
+  }
+  .centerPORWD {
+    display: flex;
+  }
+  .centerMainBox {
+    margin: 0;
+    width: 100%;
+    padding-right: 0;
+  }
+  .centerBox {
+    width: 100%;
+  }
+  .centerDynamicArrow {
+    display: none;
+  }
+  .centerPersonal {
+    display: none;
+  }
+  .centerVideo {
+    display: none;
+  }
+  .centerDynamicText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 38px;
+    background-color: rgb(53 53 53);
+    padding: 0px 7px;
+  }
+  .centerDynamic {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 210px;
+    background-color: rgb(53 53 53);
+    padding: 0px 7px;
+  }
+  .centerDynamicBox {
+    width: 23%;
+    height: 189px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .centerMainTitle {
+    padding: 12px 9px 0px;
+  }
+  .centerMainTitleText {
+    width: 77%;
+  }
+  .centerMainText {
+    padding: 4px 9px 16px;
+  }
+  .centerMainImg {
+    padding: 0px 9px;
+  }
+  .centerMainBottom {
+    width: 94%;
+    margin-left: auto;
+    font-size: 13px;
+  }
 }

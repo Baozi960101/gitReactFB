@@ -86,3 +86,8 @@
   font-weight: 700;
   font-size: 17px;
 }
+@media screen and (max-width: 600px) {
+  .leftBox {
+    display: none;
+  }
+}

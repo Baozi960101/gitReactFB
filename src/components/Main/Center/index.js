@@ -16,9 +16,19 @@ export default () => {
   return (
     <div className="centerMainBox">
       <div className="centerBox">
+        <div className="centerPORWD">
+          <Head />
+          <div className="centerPOTextRWD">在想些甚麼 ?</div>
+          <div className="centerPOTextRWDImg">
+            <img src={Photo} />
+            相片
+          </div>
+        </div>
+        <div className="centerDynamicText">
+          <div className="centerDynamicTextLift">限時動態</div>
+          <div className="centerDynamicTextRight">你的典藏</div>
+        </div>
         <div className="centerDynamic">
-          <div className="centerDynamicBox"></div>
-          <div className="centerDynamicBox"></div>
           <div className="centerDynamicBox"></div>
           <div className="centerDynamicBox"></div>
           <div className="centerDynamicBox"></div>
