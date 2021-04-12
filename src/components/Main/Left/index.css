@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+.leftBox {
+  width: 360px;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 72px 8px 0 8px;
+  overflow-y: auto;
+}
+.leftBox::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.leftBox::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: rgb(105, 105, 105);
+}
+.leftBox::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.leftTitle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #d4d7db;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.leftTitle:hover {
+  background-color: #313235;
+}
+.leftTitle > img {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  margin-right: 13px;
+  margin-left: 4px;
+}
+.leftHeadPersonal {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+.leftHeadPersonal > img {
+  width: 36px;
+  height: 36px;
+}
+.leftTitleButtom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 20px;
+  background-color: #303031;
+  box-sizing: border-box;
+  margin: 0px 12px 0 2px;
+}
+.leftTitleButtom > img {
+  width: 14px;
+  height: 14px;
+}
+.leftTitleButtom:hover {
+  background-color: #49494b;
+}
+.headsubtitle {
+  display: flex;
+  width: 95%;
+  height: 37px;
+  box-sizing: border-box;
+  border-top: 1px solid #545454;
+  padding-top: 18px;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #9e9d9d;
+  font-weight: 700;
+  font-size: 17px;
+}
+@media only screen and (min-width: 1100px) and (max-width: 1260px) {
+  .leftBox {
+    flex-shrink: 0;
+    width: 240px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .leftBox {
+    display: none;
+  }
+}
