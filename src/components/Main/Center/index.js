@@ -5,6 +5,12 @@ import Rightarrow from "./images/rightarrow.svg";
 import VideoCamera from "./images/videoCamera.svg";
 import Photo from "./images/photo.svg";
 import Feel from "./images/feel.svg";
+import Like from "./images/like.svg";
+import Chat from "./images/chat.svg";
+import Share from "./images/share.svg";
+import Likecircle from "./images/likeCircle.svg";
+import More from "./images/more.svg";
+import World from "./images/world.svg";
 
 export default () => {
   return (
@@ -47,8 +53,40 @@ export default () => {
             建立包廂
           </div>
         </div>
-        <div>
-          <div className="centerMainTitle">4</div>
+        <div className="centerMainAllBox">
+          <div className="centerMainTitle">
+            <div>
+              <Head />
+            </div>
+            <div className="centerMainTitleText">
+              <div className="centerMainTitleTextUp">許仕翰</div>
+              <div className="centerMainTitleTextBottom">
+                1分鐘。
+                <img src={World} />
+              </div>
+            </div>
+            <div className="centerMainTitleButton">
+              <img src={More} />
+            </div>
+          </div>
+          <div className="centerMainText">4</div>
+          <div className="centerMainImg">放圖</div>
+          <div className="centerMainlike">
+            <img src={Likecircle} />
+          </div>
+          <div className="centerMainBottom">
+            <div className="centerMainButton">
+              <img src={Like} />讚
+            </div>
+            <div className="centerMainButton">
+              <img src={Chat} />
+              留言
+            </div>
+            <div className="centerMainButton">
+              <img src={Share} />
+              分享
+            </div>
+          </div>
         </div>
       </div>
     </div>
