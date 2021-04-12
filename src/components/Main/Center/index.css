@@ -321,7 +321,13 @@
   margin: 3px 0 0px 3px;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  .centerBox {
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .centerMainAllBox {
     margin-top: 18px;
     background-color: rgb(53 53 53);
@@ -333,6 +339,7 @@
     margin: 0;
     width: 100%;
     padding-right: 0;
+    padding-top: 0;
   }
   .centerBox {
     width: 100%;
@@ -354,6 +361,7 @@
     height: 38px;
     background-color: rgb(53 53 53);
     padding: 0px 7px;
+    box-sizing: border-box;
   }
   .centerDynamic {
     display: flex;

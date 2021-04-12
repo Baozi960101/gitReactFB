@@ -12,74 +12,116 @@ import Down from "./images/down.svg";
 import Bell from "./images/bell.svg";
 import Plus from "./images/plus.svg";
 import Messenger from "./images/messenger.svg";
+import UserRwd from "./images/userRwd.svg";
+import CameraRwd from "./images/cameraRwd.svg";
+import Friends from "./images/friends.svg";
+import Menu from "./images/menu.svg";
+import Dynamic from "./images/dynamic.svg";
 
 export default () => {
   return (
-    <div className="headBox">
-      <div className="headLeft">
-        <div className="fbBox">
-          <img src={Facebook} />
-        </div>
-        <div className="searchLogo">
-          <img src={Search} />
-        </div>
-        <input value="搜尋 Facebook" className="search" />
-      </div>
-
-      <div className="HeadCenterBox">
-        <div className="headCenter headerBorder">
-          <div className="headCenterhover" title="首頁">
-            <div className="headCenterImg">
-              <img src={Home} />
-            </div>
+    <div>
+      <div className="RWD">
+        <div className="headBoxRWD">
+          <div className="headBoxRWDImg">
+            <img src={UserRwd} />
+          </div>
+          <div className="headBoxRWDText">
+            <img src={Search} />
+            搜尋
+          </div>
+          <div className="headBoxRWDImg">
+            <img src={CameraRwd} />
           </div>
         </div>
-        <div className="headCenter">
-          <div className="headCenterhover" title="Watch">
-            <div className="headCenterImg">
-              <img src={Tv} />
-            </div>
+        <div className="headBoxRWDBottom">
+          <div className="headBoxRWDBottomImg">
+            <img src={Dynamic} />
           </div>
-        </div>
-        <div className="headCenter">
-          <div className="headCenterhover" title="Marketplace">
-            <div className="headCenterImg">
-              <img src={Shopping} />
-            </div>
+          <div className="headBoxRWDBottomImg">
+            <img src={Friends} />
           </div>
-        </div>
-        <div className="headCenter">
-          <div className="headCenterhover" title="社團">
-            <div className="headCenterImg">
-              <img src={User} />
-            </div>
+          <div className="headBoxRWDBottomImg">
+            <img src={Messenger} />
           </div>
-        </div>
-        <div className="headCenter">
-          <div className="headCenterhover" title="遊戲">
-            <div className="headCenterImg">
-              <img src={Puzzle} />
-            </div>
+          <div className="headBoxRWDBottomImg">
+            <img src={Tv} />
+          </div>
+          <div className="headBoxRWDBottomImg">
+            <img src={Bell} />
+          </div>
+          <div className="headBoxRWDBottomImg">
+            <img src={Menu} />
           </div>
         </div>
       </div>
 
-      <div className="headRight">
-        <div className="headPersonalBox">
-          <Head />
-          <div className="headPersonalText">許仕翰</div>
+      <div className="headBox">
+        <div className="headLeft">
+          <div className="fbBox">
+            <img src={Facebook} />
+          </div>
+          <div className="searchLogo">
+            <img src={Search} />
+          </div>
+          <input value="搜尋 Facebook" className="search" />
         </div>
-        <div className="headRightLogo" title="建立">
-          <img src={Plus} />
+
+        <div className="HeadCenterBox">
+          <div className="headCenter headerBorder">
+            <div className="headCenterhover" title="首頁">
+              <div className="headCenterImg">
+                <img src={Home} />
+              </div>
+            </div>
+          </div>
+          <div className="headCenter">
+            <div className="headCenterhover" title="Watch">
+              <div className="headCenterImg">
+                <img src={Tv} />
+              </div>
+            </div>
+          </div>
+          <div className="headCenter">
+            <div className="headCenterhover" title="Marketplace">
+              <div className="headCenterImg">
+                <img src={Shopping} />
+              </div>
+            </div>
+          </div>
+          <div className="headCenter">
+            <div className="headCenterhover" title="社團">
+              <div className="headCenterImg">
+                <img src={User} />
+              </div>
+            </div>
+          </div>
+          <div className="headCenter">
+            <div className="headCenterhover" title="遊戲">
+              <div className="headCenterImg">
+                <img src={Puzzle} />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="headRightLogo" title="Messenger">
-          <img src={Messenger} />
-        </div>
-        <div className="headRightLogo" title="通知">
-          <img src={Bell} />
-        </div>
-        <div className="headRightLogo" title="帳號">
-          <img src={Down} />
+
+        <div className="headRight">
+          <div className="headPersonalBox">
+            <Head />
+            <div className="headPersonalText">許仕翰</div>
+          </div>
+          <div className="headRightLogo" title="建立">
+            <img src={Plus} />
+          </div>
+          <div className="headRightLogo" title="Messenger">
+            <img src={Messenger} />
+          </div>
+          <div className="headRightLogo" title="通知">
+            <img src={Bell} />
+          </div>
+          <div className="headRightLogo" title="帳號">
+            <img src={Down} />
+          </div>
         </div>
       </div>
     </div>

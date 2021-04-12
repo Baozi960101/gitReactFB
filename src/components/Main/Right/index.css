@@ -157,7 +157,8 @@
   box-sizing: border-box;
   margin: 0px -1px 4px 1px;
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 1024px) {
   .rightBox {
     display: none;
   }
