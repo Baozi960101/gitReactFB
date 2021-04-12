@@ -4,7 +4,6 @@
   overflow-y: auto;
   box-sizing: border-box;
   padding: 72px 8px 0 8px;
-  right: 0;
 }
 .rightBox::-webkit-scrollbar {
   width: 8px;
