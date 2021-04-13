@@ -15,21 +15,30 @@ function App() {
   const history = useHistory();
 
   const [isLogin, setIsLogin] = useState(false);
+  const [accountPassword, setAccountPassword] = useState({ account: '', password: '' })
+
   useEffect(() => {
-    fetch('http://localhost:3001/login/status').then(function (response) {
+    if (accountPassword.account === '' || accountPassword.password === '') {
+      return
+    }
+    
+    fetch(`http://localhost:3001/login/status?a1=${accountPassword.account}&a2=${accountPassword.password}`).then(function (response) {
       return response.json()
     }).then(data => {
       const { status = false } = data // 預設flase，避免後端掛掉
       setIsLogin(status)
+      if (!status) {
+        window.alert("帳號密碼錯誤")
+      }
     })
-  }, [])
+  }, [accountPassword.account, accountPassword.password])
 
-  // isLogin變動後觸發
+  // isLogin變動後觸發，解決下面Route的render只會射後不理的問題（只執行一次）
   useEffect(() => {
     if (isLogin) {
       history.push('/home')
     } else {
-      history.push('/login')
+      history.push('/')
     }
   }, [isLogin])
 
@@ -44,7 +53,7 @@ function App() {
             ) : (
               <Redirect
                 to={{
-                  pathname: "/login",
+                  pathname: "/",
                   state: { from: location },
                 }}
               />
@@ -56,7 +65,7 @@ function App() {
         </Route> */}
 
         <Route path="/">
-          <Login />
+          <Login setAccountPassword={setAccountPassword} />
         </Route>
       </Switch>
   );
