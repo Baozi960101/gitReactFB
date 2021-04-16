@@ -6,8 +6,13 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "md5": "^2.3.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
@@ -23,6 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write ./src",
+    "prettier:be": "prettier --write ./backend",
     "start:be": "nodemon backend/indexBruce.js"
   },
   "eslintConfig": {
