@@ -19,6 +19,16 @@ APIs
 2. 跟資料庫連接
 3. 寫api的門牌
 
+### 註冊流程
+----前端-----
+1. 填寫帳密
+2. 按送出
+
+----後端-----
+3. 寫個路由URL接收帳密
+4. 塞進資料庫
+5. 告訴前端註冊好了 （成功或失敗）
+
 
 # 前端
 react-router-dom: https://reactrouter.com/web/guides/quick-start 為了換頁
