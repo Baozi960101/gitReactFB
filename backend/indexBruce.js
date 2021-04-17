@@ -16,10 +16,9 @@ const connection = mysqlTool.createConnection(process.env.MYSQL_URL);
 // callback
 connection.connect(function(err) {
   if (err) {
-    console.error('error connecting: ' + err.stack);
+    console.error('error connecting:' + err.stack);
     return;
   }
- 
   console.log('connected as id ' + connection.threadId);
 });
 
