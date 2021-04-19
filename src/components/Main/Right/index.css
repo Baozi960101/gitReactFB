@@ -92,6 +92,7 @@
   font-weight: 700;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 }
 .rightTitle > img {
   width: 36px;
