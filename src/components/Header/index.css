@@ -25,7 +25,7 @@ body {
   box-sizing: border-box;
   padding-left: 16px;
 }
-.fbBox > img {
+.fbBox > a {
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -108,7 +108,8 @@ body {
   width: 28px;
   height: 28px;
 }
-.headCenterImg > img {
+
+.headCenterImgA > img {
   width: 23px;
   height: 23px;
 }
@@ -159,6 +160,12 @@ body {
 .headRightLogo > img {
   width: 16px;
   height: 16px;
+}
+.headRightLogoA >img {
+  width: 17px;
+  height: 17px;
+  box-sizing: border-box;
+  margin-top: 5px;
 }
 .headRightLogo:hover {
   background-color: #505152;
