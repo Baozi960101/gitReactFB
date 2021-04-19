@@ -2,6 +2,7 @@ require("dotenv").config();
 // https://www.npmjs.com/package/express
 const express = require("express");
 const mysqlTool = require("mysql");
+
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const md5 = require("md5");
@@ -15,7 +16,7 @@ app.use(bodyParser.json());
 // ---------開始連接資料庫---------
 const connection = mysqlTool.createConnection(process.env.MYSQL_URL);
 // ---------連接成功後做的事情---------
-// callback
+// callback 回來call
 connection.connect(function (err) {
   if (err) {
 
@@ -31,7 +32,10 @@ connection.connect(function (err) {
     fail: 0,
     success: 1,
   };
+  // query(參數1: SQL命令, 參數2：執行完SQL命令要跑的callback)
 
+
+  // 註冊功能
   app.post("/register", function (request, response) {
     const {
       username,
@@ -41,12 +45,14 @@ connection.connect(function (err) {
     connection.query(
       `SELECT * FROM user where account='${username}'`,
       function (error, results, fields) {
+        // 有出事的情況
         if (error) {
           console.log(error);
-          response.json({
+          const card = {
             message: error,
             status: Status.fail,
-          });
+          }
+          response.json(card);
           return;
         }
         if (results.length > 0) {
@@ -56,6 +62,8 @@ connection.connect(function (err) {
           });
           return;
         }
+
+        // 沒有出事的情況
         connection.query(
           `INSERT INTO user (account, password) VALUES ('${username}', '${encryptedPwd}')`,
           function (error, results, fields) {
@@ -78,7 +86,7 @@ connection.connect(function (err) {
     );
   });
 
-  // 判斷是否登入了的api
+  // 登入功能
   app.post("/login", function (request, response) {
     // body
     const {
@@ -121,9 +129,11 @@ connection.connect(function (err) {
             });
             return;
           }
+
+
+          // 如果資料庫「有」這筆帳號
           if (results.length > 0) {
             const token = md5(a1);
-
             connection.query(
               `INSERT INTO tokentable (token) VALUES ('${token}')`,
               function (error, results, fields) {
@@ -135,19 +145,15 @@ connection.connect(function (err) {
                   });
                   return;
                 }
-                console.log("results", results);
+                
                 response.json({
-                  message: "註冊成功！",
+                  message: "登入成功",
                   status: Status.success,
+                  userToken: token,
                 });
               }
             );
-
-            response.json({
-              message: "登入成功",
-              status: Status.success,
-              userToken: token,
-            });
+          // 如果資料庫「沒有」這帳號
           } else {
             response.json({
               message: "帳號密碼不存在",

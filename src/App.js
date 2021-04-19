@@ -64,8 +64,8 @@ function App() {
 
   return (
     <Switch>
-      {/* 一開始的保護，沒登入去login
-      <Route
+      {/* 一開始的保護，沒登入去login */}
+      {/* <Route
         path="/home"
         render={function ({ location }) {
           return isLogin ? (
