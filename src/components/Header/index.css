@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
   border-bottom: 1px solid rgb(57 58 59);
   position: fixed;
-  z-index: 1;
+  z-index: 3;
 }
 .fbBox {
   display: flex;

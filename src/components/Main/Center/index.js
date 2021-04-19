@@ -1,4 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Transition } from "react-transition-group";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
+
 import "./index.css";
 import Head from "./HeadLogo";
 import Rightarrow from "./images/rightarrow.svg";
@@ -12,8 +23,52 @@ import Likecircle from "./images/likeCircle.svg";
 import More from "./images/more.svg";
 import World from "./images/world.svg";
 import gameIndex from "./images/game_Index.png";
+import gameIndexRWD from "./images/game_IndexRWD.png";
+import HeadImg from "./images/head.jpg";
+
+const Item = () => {
+  const transitionStyles = {
+    entering: { transform: "scale(1)", transition: "transform .5s" },
+    entered: { transform: "scale(1.1)", transition: "transform .5s" },
+    exiting: { transform: "scale(1.1)", transition: "transform .5s" },
+    exited: { transform: "scale(1)", transition: "transform .5s" },
+  };
+
+  const [Newmask, setNewmask] = useState(false);
+
+  function addmask() {
+    setNewmask(true);
+  }
+
+  function addmaskOut() {
+    setNewmask(false);
+  }
+
+  return (
+    <div
+      onMouseOver={addmask}
+      onMouseOut={addmaskOut}
+      className="centerDynamicBox"
+    >
+      <div className={Newmask === true ? "mask" : "none"}></div>
+      <Transition in={Newmask}>
+        {(state) => <img style={transitionStyles[state]} src={HeadImg}></img>}
+      </Transition>
+    </div>
+  );
+};
 
 export default () => {
+  const [displayWidth, setDisplayWidth] = useState(4);
+
+  useEffect(() => {
+    if (window.innerWidth <= 414) {
+      setDisplayWidth(3);
+    }
+  }, []);
+
+  SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
   const [message, setMessage] = useState(false);
   const [like, setLike] = useState(0);
   const [newMessage, setNewMessage] = useState("留言...");
@@ -46,11 +101,33 @@ export default () => {
             相片
           </div>
         </div>
-        <div className="centerDynamicText">
-          <div className="centerDynamicTextLift">限時動態</div>
-          <div className="centerDynamicTextRight">你的典藏</div>
-        </div>
+
         <div className="centerDynamic">
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={displayWidth}
+            navigation
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        {/* <div className="centerDynamic">
           <div className="centerDynamicBox"></div>
           <div className="centerDynamicBox"></div>
           <div className="centerDynamicBox"></div>
@@ -58,7 +135,7 @@ export default () => {
           <div className="centerDynamicArrow" title="查看所有現實動態">
             <img src={Rightarrow} />
           </div>
-        </div>
+        </div> */}
         <div className="centerPersonal">
           <div className="centerPO">
             <Head />
