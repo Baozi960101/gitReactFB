@@ -5,14 +5,14 @@ express中文版：https://expressjs.com/zh-tw/
 
 ## 登入系統 功能
 ## 前端：
-- 登入頁面功能
-1. 登入
-2. 註冊
+- 登入頁面
+- 判斷登入了沒，登入的介面，註冊的介面
 
 ## 後端：
 APIs
-1. 登入 /login api  POST
-2. 註冊 /regist api  POST
+1. 讓判斷登入 /login/status function
+2. 登入 /login function
+3. 註冊 /regist function
 
 寫基礎基礎後端的步驟
 1. 初始化後端框架
