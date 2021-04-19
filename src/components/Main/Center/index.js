@@ -12,7 +12,6 @@ import Likecircle from "./images/likeCircle.svg";
 import More from "./images/more.svg";
 import World from "./images/world.svg";
 import gameIndex from "./images/game_Index.png";
-import Carousal from "./Carousal";
 
 export default () => {
   const [message, setMessage] = useState(false);
@@ -47,11 +46,11 @@ export default () => {
             相片
           </div>
         </div>
-        {/* <div className="centerDynamicText">
+        <div className="centerDynamicText">
           <div className="centerDynamicTextLift">限時動態</div>
           <div className="centerDynamicTextRight">你的典藏</div>
-        </div> */}
-        {/* <div className="centerDynamic">
+        </div>
+        <div className="centerDynamic">
           <div className="centerDynamicBox"></div>
           <div className="centerDynamicBox"></div>
           <div className="centerDynamicBox"></div>
@@ -59,8 +58,7 @@ export default () => {
           <div className="centerDynamicArrow" title="查看所有現實動態">
             <img src={Rightarrow} />
           </div>
-        </div> */}
-        <Carousal />
+        </div>
         <div className="centerPersonal">
           <div className="centerPO">
             <Head />
