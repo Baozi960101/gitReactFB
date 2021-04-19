@@ -91,9 +91,9 @@ export default () => {
           <div className="headCenter">
             <div className="headCenterhover" title="Watch">
               <div className="headCenterImg">
-              <a
+                <a
                   className="headCenterImgA"
-                  href="https://www.facebook.com/watch"
+                  href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -105,9 +105,9 @@ export default () => {
           <div className="headCenter">
             <div className="headCenterhover" title="Marketplace">
               <div className="headCenterImg">
-              <a
+                <a
                   className="headCenterImgA"
-                  href="https://www.facebook.com/marketplace/?ref=app_tab"
+                  href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -119,9 +119,9 @@ export default () => {
           <div className="headCenter">
             <div className="headCenterhover" title="社團">
               <div className="headCenterImg">
-              <a
+                <a
                   className="headCenterImgA"
-                  href="https://www.facebook.com/groups/discover/"
+                  href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -133,9 +133,9 @@ export default () => {
           <div className="headCenter">
             <div className="headCenterhover" title="遊戲">
               <div className="headCenterImg">
-              <a
+                <a
                   className="headCenterImgA"
-                  href="https://www.facebook.com/games/instantgames/"
+                  href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -156,13 +156,13 @@ export default () => {
           </div>
           <div className="headRightLogo" title="Messenger">
             <a
-                  className="headRightLogoA"
-                  href="https://www.messenger.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={Messenger} />
-                </a>
+              className="headRightLogoA"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={Messenger} />
+            </a>
           </div>
           <div className="headRightLogo" title="通知">
             <img src={Bell} />

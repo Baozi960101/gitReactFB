@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import Head from "./HeadLogo";
 import Rightarrow from "./images/rightarrow.svg";
@@ -11,8 +11,30 @@ import Share from "./images/share.svg";
 import Likecircle from "./images/likeCircle.svg";
 import More from "./images/more.svg";
 import World from "./images/world.svg";
+import gameIndex from "./images/game_Index.png";
 
 export default () => {
+  const [message, setMessage] = useState(false);
+  const [like, setLike] = useState(0);
+  const [newMessage, setNewMessage] = useState("留言...");
+  const [NewMessageText, setNewMessageText] = useState(false);
+
+  function addLike() {
+    setLike(like + 1);
+  }
+
+  function addMessage() {
+    setMessage(true);
+  }
+
+  function addNewMessage(e) {
+    setNewMessage(e.target.value);
+  }
+
+  function addnewMessageText() {
+    setNewMessageText(true);
+  }
+
   return (
     <div className="centerMainBox">
       <div className="centerBox">
@@ -57,12 +79,6 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="centerVideo">
-          <div className="centerVideoButton">
-            <img src={VideoCamera} />
-            建立包廂
-          </div>
-        </div>
         <div className="centerMainAllBox">
           <div className="centerMainTitle">
             <div>
@@ -79,16 +95,22 @@ export default () => {
               <img src={More} />
             </div>
           </div>
-          <div className="centerMainText">4</div>
-          <div className="centerMainImg">放圖</div>
+          <div className="centerMainText">
+            遊戲目錄
+            <div className="wellText">#第一個作品 #JaveScript</div>
+          </div>
+          <div className="centerMainImg">
+            <img src={gameIndex} />
+          </div>
           <div className="centerMainlike">
             <img src={Likecircle} />
+            <div className="likeText">{like}</div>
           </div>
           <div className="centerMainBottom">
-            <div className="centerMainButton">
+            <div className="centerMainButton" onClick={addLike}>
               <img src={Like} />讚
             </div>
-            <div className="centerMainButton">
+            <div className="centerMainButton" onClick={addMessage}>
               <img src={Chat} />
               留言
             </div>
@@ -96,6 +118,30 @@ export default () => {
               <img src={Share} />
               分享
             </div>
+          </div>
+          <div className={message === true ? "centerMainBottom" : "none"}>
+            <div className="centerPO">
+              <Head />
+              <input
+                type="Text"
+                value={newMessage}
+                className="centerMessage"
+                onChange={addNewMessage}
+              ></input>
+              <button
+                className="centerMessageButton"
+                onClick={addnewMessageText}
+              >
+                發送
+              </button>
+            </div>
+          </div>
+
+          <div
+            className={NewMessageText === true ? "centerPOMessager" : "none"}
+          >
+            <Head />
+            <div className="centerMessageText">{newMessage}</div>
           </div>
         </div>
       </div>

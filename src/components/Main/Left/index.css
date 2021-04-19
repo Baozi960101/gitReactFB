@@ -32,6 +32,7 @@
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 }
 .leftTitle:hover {
   background-color: #313235;
@@ -69,9 +70,16 @@
   width: 14px;
   height: 14px;
 }
-.leftTitleButtom:hover {
+.changeColor1 {
+  background-color: #313235;
+}
+.changeColor2 {
   background-color: #49494b;
 }
+.none {
+  display: none;
+}
+
 .headsubtitle {
   display: flex;
   width: 95%;
