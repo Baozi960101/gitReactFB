@@ -43,11 +43,12 @@ export default () => {
         許仕翰
         <div className="online"></div>
       </div>
-      <div className="rightTitle">
+      {/* mailto: abc@example.com */}
+      <a href="tel:0978026876" className="rightTitle">
         <img src={Telephone} />
         0978026876
         <div className="online"></div>
-      </div>
+      </a>
       <div className="contacts">群組對話</div>
       <div className="rightTitle">
         <div className="rightTitleButtom">

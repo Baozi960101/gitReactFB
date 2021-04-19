@@ -23,6 +23,7 @@
     "react-transition-group": "^4.4.1",
     "sass": "^1.32.10",
     "scss": "^0.2.4",
+    "simple-react-lightbox": "^3.6.6",
     "swiper": "^6.5.7",
     "web-vitals": "^1.1.1"
   },

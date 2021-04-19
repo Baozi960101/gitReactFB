@@ -12,21 +12,15 @@ import "swiper/components/scrollbar/scrollbar.scss";
 
 import "./index.css";
 import Head from "./HeadLogo";
-import Rightarrow from "./images/rightarrow.svg";
 import VideoCamera from "./images/videoCamera.svg";
 import Photo from "./images/photo.svg";
 import Feel from "./images/feel.svg";
-import Like from "./images/like.svg";
-import Chat from "./images/chat.svg";
-import Share from "./images/share.svg";
-import Likecircle from "./images/likeCircle.svg";
-import More from "./images/more.svg";
-import World from "./images/world.svg";
-import gameIndex from "./images/game_Index.png";
-import gameIndexRWD from "./images/game_IndexRWD.png";
 import HeadImg from "./images/head.jpg";
+import gameIndex from "./images/game_Index.png";
 
-const Item = () => {
+import Post from "./Post";
+
+const Item = ({ id, imgSrc }) => {
   const transitionStyles = {
     entering: { transform: "scale(1)", transition: "transform .5s" },
     entered: { transform: "scale(1.1)", transition: "transform .5s" },
@@ -45,16 +39,17 @@ const Item = () => {
   }
 
   return (
-    <div
+    <a
       onMouseOver={addmask}
       onMouseOut={addmaskOut}
       className="centerDynamicBox"
+      href={`http://localhost:3000/#${id}`}
     >
       <div className={Newmask === true ? "mask" : "none"}></div>
       <Transition in={Newmask}>
-        {(state) => <img style={transitionStyles[state]} src={HeadImg}></img>}
+        {(state) => <img style={transitionStyles[state]} src={imgSrc}></img>}
       </Transition>
-    </div>
+    </a>
   );
 };
 
@@ -68,27 +63,6 @@ export default () => {
   }, []);
 
   SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
-
-  const [message, setMessage] = useState(false);
-  const [like, setLike] = useState(0);
-  const [newMessage, setNewMessage] = useState("留言...");
-  const [NewMessageText, setNewMessageText] = useState(false);
-
-  function addLike() {
-    setLike(like + 1);
-  }
-
-  function addMessage() {
-    setMessage(true);
-  }
-
-  function addNewMessage(e) {
-    setNewMessage(e.target.value);
-  }
-
-  function addnewMessageText() {
-    setNewMessageText(true);
-  }
 
   return (
     <div className="centerMainBox">
@@ -106,36 +80,27 @@ export default () => {
           <Swiper
             spaceBetween={10}
             slidesPerView={displayWidth}
-            navigation
+            // navigation
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
-              <Item />
+              <Item id="1" imgSrc={gameIndex} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item />
+              <Item id="2" imgSrc={HeadImg} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item />
+              <Item id="3" imgSrc={HeadImg}  />
             </SwiperSlide>
             <SwiperSlide>
-              <Item />
+              <Item id="4" imgSrc={HeadImg}  />
             </SwiperSlide>
             <SwiperSlide>
-              <Item />
+              <Item id="5" imgSrc={HeadImg}  />
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* <div className="centerDynamic">
-          <div className="centerDynamicBox"></div>
-          <div className="centerDynamicBox"></div>
-          <div className="centerDynamicBox"></div>
-          <div className="centerDynamicBox"></div>
-          <div className="centerDynamicArrow" title="查看所有現實動態">
-            <img src={Rightarrow} />
-          </div>
-        </div> */}
         <div className="centerPersonal">
           <div className="centerPO">
             <Head />
@@ -156,71 +121,10 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="centerMainAllBox">
-          <div className="centerMainTitle">
-            <div>
-              <Head />
-            </div>
-            <div className="centerMainTitleText">
-              <div className="centerMainTitleTextUp">許仕翰</div>
-              <div className="centerMainTitleTextBottom">
-                1分鐘。
-                <img src={World} />
-              </div>
-            </div>
-            <div className="centerMainTitleButton">
-              <img src={More} />
-            </div>
-          </div>
-          <div className="centerMainText">
-            遊戲目錄
-            <div className="wellText">#第一個作品 #JaveScript</div>
-          </div>
-          <div className="centerMainImg">
-            <img src={gameIndex} />
-          </div>
-          <div className="centerMainlike">
-            <img src={Likecircle} />
-            <div className="likeText">{like}</div>
-          </div>
-          <div className="centerMainBottom">
-            <div className="centerMainButton" onClick={addLike}>
-              <img src={Like} />讚
-            </div>
-            <div className="centerMainButton" onClick={addMessage}>
-              <img src={Chat} />
-              留言
-            </div>
-            <div className="centerMainButton">
-              <img src={Share} />
-              分享
-            </div>
-          </div>
-          <div className={message === true ? "centerMainBottom" : "none"}>
-            <div className="centerPO">
-              <Head />
-              <input
-                type="Text"
-                value={newMessage}
-                className="centerMessage"
-                onChange={addNewMessage}
-              ></input>
-              <button
-                className="centerMessageButton"
-                onClick={addnewMessageText}
-              >
-                發送
-              </button>
-            </div>
-          </div>
 
-          <div
-            className={NewMessageText === true ? "centerPOMessager" : "none"}
-          >
-            <Head />
-            <div className="centerMessageText">{newMessage}</div>
-          </div>
-        </div>
+        <Post id="1" />
+        <Post id="2" />
+        <Post id="3" />
       </div>
     </div>
   );
