@@ -18,9 +18,11 @@ const connection = mysqlTool.createConnection(process.env.MYSQL_URL);
 // callback
 connection.connect(function (err) {
   if (err) {
+
     console.error("error connecting: " + err.stack);
     return;
   }
+
 
   // 0 = 註冊失敗
   // 1 = 註冊成功
@@ -31,7 +33,10 @@ connection.connect(function (err) {
   };
 
   app.post("/register", function (request, response) {
-    const { username, pwd } = request.body;
+    const {
+      username,
+      pwd
+    } = request.body;
     const encryptedPwd = md5(pwd + process.env.SALT);
     connection.query(
       `SELECT * FROM user where account='${username}'`,
@@ -76,7 +81,11 @@ connection.connect(function (err) {
   // 判斷是否登入了的api
   app.post("/login", function (request, response) {
     // body
-    const { a1, a2, token } = request.body;
+    const {
+      a1,
+      a2,
+      token
+    } = request.body;
 
     if (token) {
       connection.query(

@@ -59,47 +59,88 @@ export default () => {
       <div className="headBox">
         <div className="headLeft">
           <div className="fbBox">
-            <img src={Facebook} />
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={Facebook} />
+            </a>
           </div>
           <div className="searchLogo">
             <img src={Search} />
           </div>
-          <input value="搜尋 Facebook" className="search" />
+          <input value="" className="search" />
         </div>
 
         <div className="HeadCenterBox">
           <div className="headCenter headerBorder">
             <div className="headCenterhover" title="首頁">
               <div className="headCenterImg">
-                <img src={Home} />
+                <a
+                  className="headCenterImgA"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Home} />
+                </a>
               </div>
             </div>
           </div>
           <div className="headCenter">
             <div className="headCenterhover" title="Watch">
               <div className="headCenterImg">
-                <img src={Tv} />
+                <a
+                  className="headCenterImgA"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Tv} />
+                </a>
               </div>
             </div>
           </div>
           <div className="headCenter">
             <div className="headCenterhover" title="Marketplace">
               <div className="headCenterImg">
-                <img src={Shopping} />
+                <a
+                  className="headCenterImgA"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Shopping} />
+                </a>
               </div>
             </div>
           </div>
           <div className="headCenter">
             <div className="headCenterhover" title="社團">
               <div className="headCenterImg">
-                <img src={User} />
+                <a
+                  className="headCenterImgA"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={User} />
+                </a>
               </div>
             </div>
           </div>
           <div className="headCenter">
             <div className="headCenterhover" title="遊戲">
               <div className="headCenterImg">
-                <img src={Puzzle} />
+                <a
+                  className="headCenterImgA"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Puzzle} />
+                </a>
               </div>
             </div>
           </div>
@@ -114,7 +155,14 @@ export default () => {
             <img src={Plus} />
           </div>
           <div className="headRightLogo" title="Messenger">
-            <img src={Messenger} />
+            <a
+              className="headRightLogoA"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={Messenger} />
+            </a>
           </div>
           <div className="headRightLogo" title="通知">
             <img src={Bell} />
