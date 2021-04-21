@@ -8,9 +8,9 @@ import Share from "./images/share.svg";
 import Likecircle from "./images/likeCircle.svg";
 import More from "./images/more.svg";
 import World from "./images/world.svg";
-import gameIndex from "./images/game_Index.png";
 
-const Post = () => {
+
+const Post = ( {poImg,poText,mark}) => {
   const [message, setMessage] = useState(false);
   const [like, setLike] = useState(9999);
   const [newMessage, setNewMessage] = useState("");
@@ -52,17 +52,19 @@ const Post = () => {
             </div>
           </div>
           <div className="centerMainTitleButton">
-            <img src={More} />
+            {/* <img src={More} /> */}
           </div>
         </div>
         <div className="centerMainText">
-          遊戲目錄
-          <div className="wellText">#第一個作品 #JaveScript</div>
+          {poText}
+          <div className="wellText">
+          {mark}
+          </div>
         </div>
 
         <SRLWrapper>
           <div className="centerMainImg">
-            <img src={gameIndex} />
+            <img src={poImg} />
           </div>
         </SRLWrapper>
         <div className="centerMainlike">

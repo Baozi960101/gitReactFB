@@ -15,8 +15,19 @@ import Head from "./HeadLogo";
 import VideoCamera from "./images/videoCamera.svg";
 import Photo from "./images/photo.svg";
 import Feel from "./images/feel.svg";
-import HeadImg from "./images/head.jpg";
-import gameIndex from "./images/game_Index.png";
+import GameIndexTime from "./images/game_Indextime.png";
+import CalculatorTime from "./images/calculatortime.png";
+import HighspeedTime from "./images/highspeedtime.png";
+import OoxxTime from "./images/ooxxtime.png";
+import StopwatchTime from "./images/stopwatchtime.png";
+import GameIndexPO from "./images/game_Index.png";
+import Calculator from "./images/calculator.png";
+import Highspeed from "./images/highspeed.png";
+import Ooxx from "./images/ooxx.png";
+import Stopwatch from "./images/stopwatch.png";
+
+
+
 
 import Post from "./Post";
 
@@ -68,7 +79,7 @@ export default () => {
       <div className="centerBox">
         <div className="centerPORWD">
           <Head />
-          <div className="centerPOTextRWD">在想些甚麼 ?</div>
+          <div placeholder="在想些甚麼 ?" className="centerPOTextRWD"></div>
           <div className="centerPOTextRWDImg">
             <img src={Photo} />
             相片
@@ -84,19 +95,19 @@ export default () => {
             onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
-              <Item imgSrc={gameIndex} />
+              <Item imgSrc={GameIndexTime} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item imgSrc={HeadImg} />
+              <Item imgSrc={CalculatorTime} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item imgSrc={HeadImg} />
+              <Item imgSrc={OoxxTime} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item imgSrc={HeadImg} />
+              <Item imgSrc={StopwatchTime} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item imgSrc={HeadImg} />
+              <Item imgSrc={HighspeedTime} />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -121,9 +132,11 @@ export default () => {
           </div>
         </div>
 
-        <Post />
-        <Post />
-        <Post />
+        <Post poImg={GameIndexPO} poText="遊戲目錄" mark="#第一個作品 #JaveScript #RWD"/>
+        <Post poImg={Ooxx} poText="井字遊戲" mark="#第二個作品 #JaveScript運用"/>
+        <Post poImg={Stopwatch} poText="計時器" mark="#第三個作品 #JaveScript運用"/>
+        <Post poImg={Calculator} poText="簡易計算機" mark="#第四個作品 #JaveScript運用"/>
+        <Post poImg={Highspeed} poText="高鐵時刻查詢系統" mark="#第五個作品 #JaveScript #API #React #RWD"/>
       </div>
     </div>
   );

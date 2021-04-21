@@ -33,7 +33,9 @@ export default () => {
     <div className="rightBox">
       <div className="advertising">
         <div className="advertisingTitle">贊助</div>
-        <div className="advertisingMain">廣告欄</div>
+        <div className="advertisingMain">
+          
+        </div>
       </div>
       <div className="contacts">
         <div className="contactsText">contacts</div>
