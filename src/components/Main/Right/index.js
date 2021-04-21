@@ -7,10 +7,12 @@ import VideoCamera from "./images/videoCamera.svg";
 import Search from "./images/search.svg";
 import More from "./images/more.svg";
 import Close from "./images/close.svg";
+import Email from "./images/email.svg";
 import Telephone from "./images/telephone.png";
 
 export default () => {
   const [addEdit, setAddEdit] = useState(false);
+  const [color, setColor] = useState(false);
 
   function addEditDiv() {
     if (addEdit === false) {
@@ -18,6 +20,13 @@ export default () => {
     } else {
       setAddEdit(false);
     }
+  }
+
+  function Change() {
+    setColor(true);
+  }
+  function ChangeOut() {
+    setColor(false);
   }
 
   return (
@@ -49,9 +58,23 @@ export default () => {
         0978026876
         <div className="online"></div>
       </a>
+      <a href="mailto:Baozi960101@gmail.com" className="rightTitle">
+        <img src={Email} />
+        Baozi960101@gmail.com
+        <div className="online"></div>
+      </a>
       <div className="contacts">群組對話</div>
-      <div className="rightTitle">
-        <div className="rightTitleButtom">
+      <div
+        onClick={addEditDiv}
+        onMouseOver={Change}
+        onMouseOut={ChangeOut}
+        className={color === true ? "rightTitle changeColor1" : "rightTitle"}
+      >
+        <div
+          className={
+            color === true ? "rightTitleButtom changeColor2" : "rightTitleButtom"
+          }
+        >
           <img src={Plus} />
         </div>
         建立新群組
@@ -61,12 +84,15 @@ export default () => {
       </div>
       <div className={addEdit === true ? "editDiv" : "none"}>
         <div className="editDivTitle">
-          <div>新訊息 ! ! !</div>
+          <div>簡述該網站</div>
           <img src={Close} onClick={addEditDiv} />
         </div>
-        <div className="editDivTitle editDivTitleButtom">致:</div>
+        <div className="editDivTitle editDivTitleButtom">致 :  面試官</div>
         <div className="editDivTitleTwo">
-          <div className="editDivTitleTwoText">建議</div>
+          <div className="editDivTitleTwoText">內容</div>
+        </div>
+        <div className="editDivTitleText">
+          還在學習階段，試做出Facebook的介面，用來放置自己作品，使自己所學到的技術呈現出來。
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ import gameIndex from "./images/game_Index.png";
 
 import Post from "./Post";
 
-const Item = ({ id, imgSrc }) => {
+const Item = ({ imgSrc }) => {
   const transitionStyles = {
     entering: { transform: "scale(1)", transition: "transform .5s" },
     entered: { transform: "scale(1.1)", transition: "transform .5s" },
@@ -43,11 +43,10 @@ const Item = ({ id, imgSrc }) => {
       onMouseOver={addmask}
       onMouseOut={addmaskOut}
       className="centerDynamicBox"
-      href={`http://localhost:3000/#${id}`}
     >
       <div className={Newmask === true ? "mask" : "none"}></div>
       <Transition in={Newmask}>
-        {(state) => <img style={transitionStyles[state]} src={imgSrc}></img>}
+        {(state) => <img style={transitionStyles[state]} src={imgSrc} />}
       </Transition>
     </a>
   );
@@ -85,19 +84,19 @@ export default () => {
             onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
-              <Item id="1" imgSrc={gameIndex} />
+              <Item imgSrc={gameIndex} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item id="2" imgSrc={HeadImg} />
+              <Item imgSrc={HeadImg} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item id="3" imgSrc={HeadImg}  />
+              <Item imgSrc={HeadImg} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item id="4" imgSrc={HeadImg}  />
+              <Item imgSrc={HeadImg} />
             </SwiperSlide>
             <SwiperSlide>
-              <Item id="5" imgSrc={HeadImg}  />
+              <Item imgSrc={HeadImg} />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -122,9 +121,9 @@ export default () => {
           </div>
         </div>
 
-        <Post id="1" />
-        <Post id="2" />
-        <Post id="3" />
+        <Post />
+        <Post />
+        <Post />
       </div>
     </div>
   );
