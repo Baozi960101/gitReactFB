@@ -170,8 +170,9 @@
   position: fixed;
   bottom: 0;
   right: 80px;
-  background-color: rgb(36 37 38);
+  background-color: rgb(58 58 58);
   border-radius: 15px 15px 0 0;
+  color: #ccc9c9;
 }
 .editDivTitle {
   display: flex;
@@ -199,10 +200,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 89%;
   height: 100%;
   color: #2e89ff;
   border-bottom: 3px solid #2e89ff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.editDivTitleText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  color: #d4d7db;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 1024px) {
