@@ -33,9 +33,7 @@ export default () => {
     <div className="rightBox">
       <div className="advertising">
         <div className="advertisingTitle">贊助</div>
-        <div className="advertisingMain">
-          
-        </div>
+        <div className="advertisingMain"></div>
       </div>
       <div className="contacts">
         <div className="contactsText">contacts</div>
@@ -74,7 +72,9 @@ export default () => {
       >
         <div
           className={
-            color === true ? "rightTitleButtom changeColor2" : "rightTitleButtom"
+            color === true
+              ? "rightTitleButtom changeColor2"
+              : "rightTitleButtom"
           }
         >
           <img src={Plus} />
@@ -89,7 +89,7 @@ export default () => {
           <div>簡述該網站</div>
           <img src={Close} onClick={addEditDiv} />
         </div>
-        <div className="editDivTitle editDivTitleButtom">致 :  面試官</div>
+        <div className="editDivTitle editDivTitleButtom">致 : 面試官</div>
         <div className="editDivTitleTwo">
           <div className="editDivTitleTwoText">內容</div>
         </div>

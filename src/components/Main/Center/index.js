@@ -26,9 +26,6 @@ import Highspeed from "./images/highspeed.png";
 import Ooxx from "./images/ooxx.png";
 import Stopwatch from "./images/stopwatch.png";
 
-
-
-
 import Post from "./Post";
 
 const Item = ({ imgSrc }) => {
@@ -132,11 +129,31 @@ export default () => {
           </div>
         </div>
 
-        <Post poImg={GameIndexPO} poText="遊戲目錄" mark="#第一個作品 #JaveScript #RWD"/>
-        <Post poImg={Ooxx} poText="井字遊戲" mark="#第二個作品 #JaveScript運用"/>
-        <Post poImg={Stopwatch} poText="計時器" mark="#第三個作品 #JaveScript運用"/>
-        <Post poImg={Calculator} poText="簡易計算機" mark="#第四個作品 #JaveScript運用"/>
-        <Post poImg={Highspeed} poText="高鐵時刻查詢系統" mark="#第五個作品 #JaveScript #API #React #RWD"/>
+        <Post
+          poImg={GameIndexPO}
+          poText="遊戲目錄"
+          mark="#第一個作品 #JaveScript #RWD"
+        />
+        <Post
+          poImg={Ooxx}
+          poText="井字遊戲"
+          mark="#第二個作品 #JaveScript運用"
+        />
+        <Post
+          poImg={Stopwatch}
+          poText="計時器"
+          mark="#第三個作品 #JaveScript運用"
+        />
+        <Post
+          poImg={Calculator}
+          poText="簡易計算機"
+          mark="#第四個作品 #JaveScript運用"
+        />
+        <Post
+          poImg={Highspeed}
+          poText="高鐵時刻查詢系統"
+          mark="#第五個作品 #JaveScript #API #React #RWD"
+        />
       </div>
     </div>
   );
