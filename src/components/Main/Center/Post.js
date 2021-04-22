@@ -9,8 +9,7 @@ import Likecircle from "./images/likeCircle.svg";
 import More from "./images/more.svg";
 import World from "./images/world.svg";
 
-
-const Post = ( {poImg,poText,mark}) => {
+const Post = ({ poImg, poText, mark, id }) => {
   const [message, setMessage] = useState(false);
   const [like, setLike] = useState(9999);
   const [newMessage, setNewMessage] = useState("");
@@ -39,7 +38,7 @@ const Post = ( {poImg,poText,mark}) => {
 
   return (
     <>
-      <div className="centerMainAllBox">
+      <div className="centerMainAllBox" id={id}>
         <div className="centerMainTitle">
           <div>
             <Head />
@@ -57,12 +56,21 @@ const Post = ( {poImg,poText,mark}) => {
         </div>
         <div className="centerMainText">
           {poText}
-          <div className="wellText">
-          {mark}
-          </div>
+          <div className="wellText">{mark}</div>
         </div>
 
-        <SRLWrapper>
+        <SRLWrapper
+          options={{
+            buttons: {
+              showAutoplayButton: false,
+              showNextButton: false,
+              showPrevButton: false,
+            },
+            thumbnails: {
+              showThumbnails: false,
+            },
+          }}
+        >
           <div className="centerMainImg">
             <img src={poImg} />
           </div>
@@ -73,23 +81,20 @@ const Post = ( {poImg,poText,mark}) => {
         </div>
         <div className="centerMainBottom">
           <div className="centerMainButton" onClick={addLike}>
-            <img src={Like} />
-            讚
+            <img src={Like} />讚
           </div>
           <div className="centerMainButton" onClick={addMessage}>
             <img src={Chat} />
             留言
           </div>
-          <a  
-              className="centerMainButton"
-              href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/許仕翰.ceng1/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-          
+          <a
+            className="centerMainButton"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/許仕翰.ceng1/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Share} />
             分享
-          
           </a>
         </div>
 
