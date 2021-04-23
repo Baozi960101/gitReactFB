@@ -300,7 +300,6 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  cursor: pointer;
 }
 .centerMainTitleText {
   width: 545px;
@@ -331,9 +330,7 @@
   width: 18px;
   height: 18px;
 }
-.centerMainTitleButton:hover {
-  background-color: rgb(63, 63, 63);
-}
+
 .centerMainText {
   width: 100%;
   padding: 4px 16px 16px;

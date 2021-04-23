@@ -60,6 +60,42 @@ const Item = ({ imgSrc }) => {
   );
 };
 
+const postArr = [
+  {
+    poImg: GameIndexPO,
+    poText: "遊戲目錄",
+    mark: "#第一個作品 #JaveScript #RWD",
+  },
+  {
+    poImg: Ooxx,
+    poText: "井字遊戲",
+    mark: "#第二個作品 #JaveScript運用",
+  },
+  {
+    poImg: Stopwatch,
+    poText: "計時器",
+    mark: "#第三個作品 #JaveScript運用",
+  },
+  {
+    poImg: Calculator,
+    poText: "簡易計算機",
+    mark: "#第四個作品 #JaveScript運用",
+  },
+  {
+    poImg: Highspeed,
+    poText: "高鐵時刻查詢系統",
+    mark: "#第五個作品 #JaveScript #API #React #RWD",
+  },
+];
+
+const postRwd = [
+  { imgSrc: GameIndexTime },
+  { imgSrc: CalculatorTime },
+  { imgSrc: OoxxTime },
+  { imgSrc: StopwatchTime },
+  { imgSrc: HighspeedTime },
+];
+
 export default () => {
   const [displayWidth, setDisplayWidth] = useState(4);
 
@@ -91,21 +127,13 @@ export default () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
-            <SwiperSlide>
-              <Item imgSrc={GameIndexTime} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Item imgSrc={CalculatorTime} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Item imgSrc={OoxxTime} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Item imgSrc={StopwatchTime} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Item imgSrc={HighspeedTime} />
-            </SwiperSlide>
+            {postRwd.map((data) => {
+              return (
+                <SwiperSlide>
+                  <Item imgSrc={data.imgSrc} />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
         <div className="centerPersonal">
@@ -129,31 +157,13 @@ export default () => {
           </div>
         </div>
 
-        <Post
-          poImg={GameIndexPO}
-          poText="遊戲目錄"
-          mark="#第一個作品 #JaveScript #RWD"
-        />
-        <Post
-          poImg={Ooxx}
-          poText="井字遊戲"
-          mark="#第二個作品 #JaveScript運用"
-        />
-        <Post
-          poImg={Stopwatch}
-          poText="計時器"
-          mark="#第三個作品 #JaveScript運用"
-        />
-        <Post
-          poImg={Calculator}
-          poText="簡易計算機"
-          mark="#第四個作品 #JaveScript運用"
-        />
-        <Post
-          poImg={Highspeed}
-          poText="高鐵時刻查詢系統"
-          mark="#第五個作品 #JaveScript #API #React #RWD"
-        />
+        {postArr.map(function (item) {
+          return (
+            <div>
+              <Post poImg={item.poImg} poText={item.poText} mark={item.mark} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
