@@ -10,8 +10,7 @@ import Close from "./images/close.svg";
 import Email from "./images/email.svg";
 import Telephone from "./images/telephone.png";
 
-export default () => {
-  const [addEdit, setAddEdit] = useState(false);
+export default ({ addEdit, setAddEdit }) => {
   const [color, setColor] = useState(false);
 
   function addEditDiv() {

@@ -15,20 +15,24 @@ import Head from "./HeadLogo";
 import VideoCamera from "./images/videoCamera.svg";
 import Photo from "./images/photo.svg";
 import Feel from "./images/feel.svg";
-import GameIndexTime from "./images/game_Indextime.png";
-import CalculatorTime from "./images/calculatortime.png";
-import HighspeedTime from "./images/highspeedtime.png";
-import OoxxTime from "./images/ooxxtime.png";
-import StopwatchTime from "./images/stopwatchtime.png";
-import GameIndexPO from "./images/game_Index.png";
-import Calculator from "./images/calculator.png";
-import Highspeed from "./images/highspeed.png";
-import Ooxx from "./images/ooxx.png";
-import Stopwatch from "./images/stopwatch.png";
+
+// import GameIndexTime from "./images/game_Indextime.png";
+// import CalculatorTime from "./images/calculatortime.png";
+// import HighspeedTime from "./images/highspeedtime.png";
+// import OoxxTime from "./images/ooxxtime.png";
+
+import StopwatchTime from "./images/works/stopwatch.png";
+import GameIndexPO from "./images/works/game.png";
+import Calculator from "./images/works/calculator.png";
+import Highspeed from "./images/works/highspeed.png";
+import OOXX from "./images/works/ooxx.png";
+import fb from "./images/works/fb.png";
+
+import { parsingURL } from "../../../utils/url";
 
 import Post from "./Post";
 
-const Item = ({ imgSrc }) => {
+const Item = ({ imgSrc, id }) => {
   const transitionStyles = {
     entering: { transform: "scale(1)", transition: "transform .5s" },
     entered: { transform: "scale(1.1)", transition: "transform .5s" },
@@ -51,6 +55,8 @@ const Item = ({ imgSrc }) => {
       onMouseOver={addmask}
       onMouseOut={addmaskOut}
       className="centerDynamicBox"
+      href={parsingURL(id)}
+      // style={{ backgroundImage: `url(${imgSrc})`, filter: 'grayscale(50%)'}}
     >
       <div className={Newmask === true ? "mask" : "none"}></div>
       <Transition in={Newmask}>
@@ -60,44 +66,55 @@ const Item = ({ imgSrc }) => {
   );
 };
 
-const postArr = [
+const works = [
   {
-    poImg: GameIndexPO,
-    poText: "遊戲目錄",
-    mark: "#第一個作品 #JaveScript #RWD",
+    id: 1,
+    image: fb,
+    title: "仿Facebook",
+    desc: "#第一個作品 #JaveScript #RWD",
   },
   {
-    poImg: Ooxx,
-    poText: "井字遊戲",
-    mark: "#第二個作品 #JaveScript運用",
+    id: 2,
+    image: GameIndexPO,
+    title: "遊戲目錄",
+    desc: "#第二個作品 #JaveScript #RWD",
   },
   {
-    poImg: Stopwatch,
-    poText: "計時器",
-    mark: "#第三個作品 #JaveScript運用",
+    id: 3,
+    image: Highspeed,
+    title: "高鐵時刻查詢系統",
+    desc: "#第三個作品 #JaveScript #API #React #RWD",
   },
   {
-    poImg: Calculator,
-    poText: "簡易計算機",
-    mark: "#第四個作品 #JaveScript運用",
+    id: 4,
+    image: OOXX,
+    title: "井字遊戲",
+    desc: "#第四個作品 #JaveScript運用",
   },
   {
-    poImg: Highspeed,
-    poText: "高鐵時刻查詢系統",
-    mark: "#第五個作品 #JaveScript #API #React #RWD",
+    id: 5,
+    image: StopwatchTime,
+    title: "計時器",
+    desc: "#第五個作品 #JaveScript運用",
+  },
+  {
+    id: 6,
+    image: Calculator,
+    title: "簡易計算機",
+    desc: "#第六個作品 #JaveScript運用",
   },
 ];
 
-const postRwd = [
-  { imgSrc: GameIndexTime },
-  { imgSrc: CalculatorTime },
-  { imgSrc: OoxxTime },
-  { imgSrc: StopwatchTime },
-  { imgSrc: HighspeedTime },
-];
-
-export default () => {
+export default ({ addEdit, setAddEdit }) => {
   const [displayWidth, setDisplayWidth] = useState(4);
+
+  function addEditDiv() {
+    if (addEdit === false) {
+      setAddEdit(true);
+    } else {
+      setAddEdit(false);
+    }
+  }
 
   useEffect(() => {
     if (window.innerWidth <= 414) {
@@ -112,7 +129,11 @@ export default () => {
       <div className="centerBox">
         <div className="centerPORWD">
           <Head />
-          <div placeholder="在想些甚麼 ?" className="centerPOTextRWD"></div>
+          <div
+            onClick={addEditDiv}
+            placeholder="在想些甚麼 ?"
+            className="centerPOTextRWD"
+          ></div>
           <div className="centerPOTextRWDImg">
             <img src={Photo} />
             相片
@@ -127,10 +148,10 @@ export default () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
-            {postRwd.map((data) => {
+            {works.map((item) => {
               return (
                 <SwiperSlide>
-                  <Item imgSrc={data.imgSrc} />
+                  <Item imgSrc={item.image} id={item.id} />
                 </SwiperSlide>
               );
             })}
@@ -139,7 +160,9 @@ export default () => {
         <div className="centerPersonal">
           <div className="centerPO">
             <Head />
-            <div className="centerPOText">在想些甚麼 ?</div>
+            <div onClick={addEditDiv} className="centerPOText">
+              在想些甚麼 ?
+            </div>
           </div>
           <div className="centerPOBottom">
             <div className="centerPOButton">
@@ -157,11 +180,15 @@ export default () => {
           </div>
         </div>
 
-        {postArr.map(function (item) {
+        {works.map((item) => {
           return (
-            <div>
-              <Post poImg={item.poImg} poText={item.poText} mark={item.mark} />
-            </div>
+            <Post
+              key={item.title}
+              poImg={item.image}
+              poText={item.title}
+              mark={item.desc}
+              id={item.id}
+            />
           );
         })}
       </div>

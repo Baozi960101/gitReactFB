@@ -9,7 +9,7 @@ import Likecircle from "./images/likeCircle.svg";
 import More from "./images/more.svg";
 import World from "./images/world.svg";
 
-const Post = ({ poImg, poText, mark }) => {
+const Post = ({ poImg, poText, mark, id }) => {
   const [message, setMessage] = useState(false);
   const [like, setLike] = useState(9999);
   const [newMessage, setNewMessage] = useState("");
@@ -38,7 +38,7 @@ const Post = ({ poImg, poText, mark }) => {
 
   return (
     <>
-      <div className="centerMainAllBox">
+      <div className="centerMainAllBox" id={id}>
         <div className="centerMainTitle">
           <div>
             <Head />
@@ -59,7 +59,18 @@ const Post = ({ poImg, poText, mark }) => {
           <div className="wellText">{mark}</div>
         </div>
 
-        <SRLWrapper>
+        <SRLWrapper
+          options={{
+            buttons: {
+              showAutoplayButton: false,
+              showNextButton: false,
+              showPrevButton: false,
+            },
+            thumbnails: {
+              showThumbnails: false,
+            },
+          }}
+        >
           <div className="centerMainImg">
             <img src={poImg} />
           </div>
