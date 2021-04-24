@@ -204,7 +204,6 @@
   border-radius: 30px;
   cursor: pointer;
   margin-top: 0px;
-  margin-left: 15px;
   display: flex;
   align-items: center;
 }
@@ -302,7 +301,6 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  cursor: pointer;
 }
 .centerMainTitleText {
   width: 545px;
@@ -333,9 +331,7 @@
   width: 18px;
   height: 18px;
 }
-.centerMainTitleButton:hover {
-  background-color: rgb(63, 63, 63);
-}
+
 .centerMainText {
   width: 100%;
   padding: 4px 16px 16px;
@@ -437,6 +433,7 @@
   height: 100%;
   box-sizing: border-box;
   font-size: 14px;
+  margin-left: 10px;
 }
 .centerPOTextRWDImg > img {
   width: 24px;
@@ -480,7 +477,13 @@
   .centerVideo {
     display: none;
   }
+  .centerMessage {
+    width: 285px;
+  }
 
+  .centerheadPersonal {
+    margin-right: 10px;
+  }
   .centerDynamic {
     display: flex;
     justify-content: space-between;

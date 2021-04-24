@@ -15,6 +15,7 @@ import Head from "./HeadLogo";
 import VideoCamera from "./images/videoCamera.svg";
 import Photo from "./images/photo.svg";
 import Feel from "./images/feel.svg";
+
 // import GameIndexTime from "./images/game_Indextime.png";
 // import CalculatorTime from "./images/calculatortime.png";
 // import HighspeedTime from "./images/highspeedtime.png";
@@ -27,7 +28,7 @@ import Highspeed from "./images/works/highspeed.png";
 import OOXX from "./images/works/ooxx.png";
 import fb from "./images/works/fb.png";
 
-import { parsingURL } from '../../../utils/url'
+import { parsingURL } from "../../../utils/url";
 
 import Post from "./Post";
 
@@ -128,7 +129,11 @@ export default ({ addEdit, setAddEdit }) => {
       <div className="centerBox">
         <div className="centerPORWD">
           <Head />
-          <div onClick={addEditDiv} placeholder="在想些甚麼 ?" className="centerPOTextRWD"></div>
+          <div
+            onClick={addEditDiv}
+            placeholder="在想些甚麼 ?"
+            className="centerPOTextRWD"
+          ></div>
           <div className="centerPOTextRWDImg">
             <img src={Photo} />
             相片
@@ -150,13 +155,14 @@ export default ({ addEdit, setAddEdit }) => {
                 </SwiperSlide>
               );
             })}
-
           </Swiper>
         </div>
         <div className="centerPersonal">
           <div className="centerPO">
             <Head />
-            <div onClick={addEditDiv} className="centerPOText">在想些甚麼 ?</div>
+            <div onClick={addEditDiv} className="centerPOText">
+              在想些甚麼 ?
+            </div>
           </div>
           <div className="centerPOBottom">
             <div className="centerPOButton">
@@ -185,7 +191,6 @@ export default ({ addEdit, setAddEdit }) => {
             />
           );
         })}
-
       </div>
     </div>
   );

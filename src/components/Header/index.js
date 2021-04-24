@@ -34,7 +34,12 @@ export default () => {
             <img src={CameraRwd} />
           </div>
         </div>
-        <div className="headBoxRWDBottom">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="headBoxRWDBottom"
+        >
           <div className="headBoxRWDBottomImg">
             <img src={Dynamic} />
           </div>
@@ -53,7 +58,7 @@ export default () => {
           <div className="headBoxRWDBottomImg">
             <img src={Menu} />
           </div>
-        </div>
+        </a>
       </div>
 
       <div className="headBox">

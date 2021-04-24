@@ -29,6 +29,9 @@ const Post = ({ poImg, poText, mark, id }) => {
   }
 
   function addnewMessageText() {
+    if (newMessage === "") {
+      return;
+    }
     setMsgList(function (prev) {
       // prev  =  [  "1111", "2222", "3333", '4444'  ]
       return [...prev, newMessage];
