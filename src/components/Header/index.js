@@ -34,31 +34,56 @@ export default () => {
             <img src={CameraRwd} />
           </div>
         </div>
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="headBoxRWDBottom"
-        >
-          <div className="headBoxRWDBottomImg">
+        <div className="headBoxRWDBottom">
+          <a
+            className="headBoxRWDBottomImg"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Dynamic} />
-          </div>
-          <div className="headBoxRWDBottomImg">
+          </a>
+          <a
+            className="headBoxRWDBottomImg"
+            href="https://www.facebook.com/friends"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Friends} />
-          </div>
-          <div className="headBoxRWDBottomImg">
+          </a>
+          <a
+            className="headBoxRWDBottomImg"
+            href="https://www.messenger.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Messenger} />
-          </div>
-          <div className="headBoxRWDBottomImg">
+          </a>
+          <a
+            className="headBoxRWDBottomImg"
+            href="https://www.facebook.com/watch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Tv} />
-          </div>
-          <div className="headBoxRWDBottomImg">
+          </a>
+          <a
+            className="headBoxRWDBottomImg"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Bell} />
-          </div>
-          <div className="headBoxRWDBottomImg">
+          </a>
+          <a
+            className="headBoxRWDBottomImg"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Menu} />
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
 
       <div className="headBox">
@@ -93,7 +118,7 @@ export default () => {
             </div>
           </a>
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/watch"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -106,7 +131,7 @@ export default () => {
             </div>
           </a>
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/marketplace/?ref=app_tab"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -125,7 +150,7 @@ export default () => {
             </div>
           </a>
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/groups/discover/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -138,7 +163,7 @@ export default () => {
             </div>
           </a>
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/games/instantgames/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -161,7 +186,7 @@ export default () => {
             <img src={Plus} />
           </div>
           <a
-            href="https://www.facebook.com/"
+            href="https://www.messenger.com"
             target="_blank"
             rel="noopener noreferrer"
           >

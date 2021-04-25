@@ -48,40 +48,72 @@ export default () => {
         <Head />
         許仕翰
       </div>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/coronavirus_info/?page_source=bookmark&hoisted_module_types[0]=update&hoisted_module_types[1]=vaccine_finder&hoisted_module_types[2]=vaccine_tracker&hoisted_module_types[3]=latest_news"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={Facemask} />
         新冠病毒資訊中心
       </a>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/friends"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={Friend} />
         朋友
       </a>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/?sk=h_chr"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={Activity} />
         最新動態
       </a>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/?sk=favorites"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={Star} />
         最愛
       </a>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/groups/discover/"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={Societies} />
         社團
       </a>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/marketplace/?ref=bookmark"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={Store} />
         Merketplace
       </a>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/watch/"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={WatchingTv} />
         Watch
       </a>
-      <a href="https://www.facebook.com/" target="_blank" className="leftTitle">
+      <a
+        href="https://www.facebook.com/events?source=46&action_history=null"
+        target="_blank"
+        className="leftTitle"
+      >
         <img src={Dynamic} />
         活動
       </a>
       <a
-        href="https://www.facebook.com/"
+        href="https://www.messenger.com"
         target="_blank"
         className={more === true ? "leftTitle" : "none"}
       >
@@ -89,7 +121,7 @@ export default () => {
         訊息
       </a>
       <a
-        href="https://www.facebook.com/"
+        href="https://www.facebook.com/weather/?orig_src=bookmark"
         target="_blank"
         className={more === true ? "leftTitle" : "none"}
       >
@@ -97,7 +129,7 @@ export default () => {
         天氣
       </a>
       <a
-        href="https://www.facebook.com/"
+        href="https://secure.facebook.com/facebook_pay/?referrer=bookmark"
         target="_blank"
         className={more === true ? "leftTitle" : "none"}
       >
@@ -105,7 +137,7 @@ export default () => {
         Facebook Pay
       </a>
       <a
-        href="https://www.facebook.com/"
+        href="https://www.facebook.com/offers/v2/wallet"
         target="_blank"
         className={more === true ? "leftTitle" : "none"}
       >
@@ -113,7 +145,7 @@ export default () => {
         折扣
       </a>
       <a
-        href="https://www.facebook.com/"
+        href="https://www.facebook.com/games/?redirect_to_gameroom=1"
         target="_blank"
         className={more === true ? "leftTitle" : "none"}
       >
@@ -121,7 +153,7 @@ export default () => {
         遊戲
       </a>
       <a
-        href="https://www.facebook.com/"
+        href="https://www.facebook.com/jobs/?source=bookmark"
         target="_blank"
         className={more === true ? "leftTitle" : "none"}
       >
@@ -129,7 +161,7 @@ export default () => {
         工作機會
       </a>
       <a
-        href="https://www.facebook.com/"
+        href="https://www.facebook.com/watch/live/?ref=live_bookmark"
         target="_blank"
         className={more === true ? "leftTitle" : "none"}
       >
